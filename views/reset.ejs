@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+<div class="row">
+  <div class="rwd-form">
+    <form action="/reset/<%= token %>" method="POST">
+      <fieldset>
+        <legend>Rivendosni fjalëkalimin</legend>
+        <div class="form-group">
+          <label for="password">Fjalëkalim i ri</label>
+          <input class="form-control" type="password" name="password" autocomplete="off" autofocus />
+        </div>
+        <div class="form-group">
+          <label for="confirm">Konfirmo fjalëkalimin</label>
+          <input class="form-control" type="password" name="confirm" autocomplete="off" />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Rivendosni fjalëkalimin</button>
+        </div>
+	    </fieldset>
+    </form>
+	</div>
+</div>
+<% include ./partials/footer %>

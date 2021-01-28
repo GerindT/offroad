@@ -1,0 +1,43 @@
+<% include ./partials/header %>
+<div class="row">
+  <h1 style="text-align: center">Regjistrohuni</h1>
+  <div class="rwd-form">
+    <form action="/register" method="post">
+      <div class="form-group">
+        <label for="username">Emri i përdoruesit</label>
+        <input class="form-control" type="text" name="username" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Fjalëkalimi</label>
+        <input class="form-control" type="password" name="password" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="firstName">Emri</label>
+        <input class="form-control" type="text" name="firstName" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Mbiemri</label>
+        <input class="form-control" type="text" name="lastName" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="username">Email</label>
+        <input class="form-control" type="email" name="email" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="avatar">Foto e profilit</label>
+        <input class="form-control" type="text" name="avatar" placeholder="url" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-md btn-primary btn-block">Sign Up!</button>
+      </div>
+      <hr>
+      <a href="/campgrounds">Mbrapa</a>
+      <hr>
+      <div class="form-group">
+        <label for="adminCode">Kodi i Administratorit</label>
+        <input class="form-control" type="password" name="adminCode" placeholder="Vetem per Admin" autocomplete="off" />
+      </div>
+    </form>
+  </div>
+</div>
+<% include ./partials/footer %>

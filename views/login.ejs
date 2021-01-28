@@ -1,0 +1,27 @@
+<% include ./partials/header %>
+
+<div class="row">
+  <h1 style="text-align: center">Hyni</h1>
+  <div class="rwd-form">
+    <form action="/login" method="post">
+      <div class="form-group">
+        <label for="username">Emri i përdoruesit</label>
+        <input class="form-control" type="text" name="username" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Fjalëkalimi</label>
+        <input class="form-control" type="password" name="password" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-md btn-primary btn-block">Hyni</button>
+      </div>
+      <span>Keni harruar fjalëkalimin tuaj?<a href="/password_reset"> Rivendosni fjalëkalimin</a></span>
+      <hr>
+      <span>I ri në OffRoad? <a href="/register"> Regjistrohu tani!</a></span>
+    </form>
+    <hr>
+    <a href="/campgrounds">Mbrapa</a>
+  </div>
+</div>
+
+<% include ./partials/footer %>
