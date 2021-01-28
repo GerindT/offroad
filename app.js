@@ -64,4 +64,4 @@ app.use("/campgrounds/:id/comments", commentRoute);
 app.use("/users", userRoute);
 app.use("/", passwordRoute);
 
-app.listen(3000, () => console.log("The YelpCamp Server Has Started!"));
+app.listen(process.env.PORT,process.env.IP, () => console.log("The OffRoad Server Has Started!"));
