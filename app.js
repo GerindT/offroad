@@ -26,7 +26,6 @@ mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true });
 
 
   require('dotenv').config()
- console.log(process.env.APISECRET)
 
 app.set("view engine", "ejs");
 app.use(helmet());
@@ -52,6 +51,7 @@ passport.deserializeUser(User.deserializeUser());
 // pass currentUser to all routes
 app.use((req, res, next) => {
   res.locals.currentUser = req.user; // req.user is an authenticated user
+  res.locals.googleMapsKey = process.env.GOOGLE_MAPS_API_KEY;
   res.locals.error = req.flash("error");
   res.locals.success = req.flash("success");
   next();

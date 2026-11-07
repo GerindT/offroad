@@ -26,15 +26,15 @@ const upload = multer({ storage: storage, fileFilter: imageFilter});
 
 // cloudinary config
 cloudinary.config({ 
-  cloud_name: 'dmqecltxy', 
-  api_key: 571843551756777, 
-  api_secret: process.env.APISECRET
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
+  api_key: process.env.CLOUDINARY_API_KEY, 
+  api_secret: process.env.CLOUDINARY_API_SECRET || process.env.APISECRET
 });
 
 var options = {
   provider: 'locationiq',
 
-  apiKey: '92a0df9de5f33a'
+  apiKey: process.env.LOCATIONIQ_API_KEY
 
 };
  

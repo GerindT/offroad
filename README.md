@@ -51,12 +51,14 @@ Set these environment variables (a `.env` file is read with dotenv):
 | --- | --- |
 | `DATABASEURL` | MongoDB connection string (falls back to `mongodb://localhost/yelp_camp_v13`) |
 | `SESSIONSECRET` | Express session secret |
-| `APISECRET` | Cloudinary API secret |
+| `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET` | Image uploads (`APISECRET` still works for the secret) |
+| `LOCATIONIQ_API_KEY` | Geocoding post locations |
+| `GOOGLE_MAPS_API_KEY` | The map on each post page |
 | `ADMINCODE` | Code that gives a new account the admin role |
 | `PASSWORD` | Password for the Gmail account that sends reset emails |
 | `PORT`, `IP` | Address the server listens on |
 
-The Cloudinary cloud name, the LocationIQ key and the Google Maps key are set in the code (`routes/campgrounds.js`, `views/campgrounds/show.ejs`).
+`.env.example` lists them all.
 
 ## Deploy
 
